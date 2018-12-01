@@ -1,0 +1,28 @@
+@import "media.css";
+
+.logotype{
+    padding: .5rem 1rem;
+    margin: 0px;
+    line-height: 24px;
+    font-size: 1rem;
+}
+
+.main{
+    background-color: #f5f5f5;
+}
+
+.header{
+    min-height: 70px;
+    align-items: center;
+}
+
+.main-content{
+    border-right: #e3e3e3 1px solid;
+    background-color: #f9f9f9;
+    padding: 1rem 1.8rem;
+    color: #62605d;
+
+}
+.article-short{
+    padding-bottom: 1.5rem;
+}
