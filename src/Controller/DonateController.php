@@ -8,13 +8,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class DonateController extends AbstractController
 {
+    public $moneytaker = 'Donate me please!';
+
     public function donate()
     {
-        $moneytaker = 'Donate me please!';
-
 
         return $this->render('pages/donate.html.twig',[
-            'moneytaker' => $moneytaker,
+            'moneytaker' => $this->moneytaker,
         ]);
     }
 

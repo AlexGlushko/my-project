@@ -38,42 +38,15 @@
 
                     <div class="col-md-8 main-content">
                         {% block main_content %}
+                            {% for art in article %}
                         <div class="article-short">
-                                <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nihil placeat sapiente unde
-                                    veniam. Commodi facere numquam odit possimus rem similique, ullam voluptas? Cum deleniti
-                                    dolorem facere magnam sapiente voluptate?
-                                </p>
-                                <p>Consectetur, dicta facere illo ipsum libero omnis quo rem. Ab dolor ea error, illo in
-                                    incidunt iste labore natus nobis omnis praesentium quidem quod repudiandae sapiente ullam.
-                                    Doloremque, temporibus, voluptates.
-                                </p>
-                            <a href="#" type="button" class="btn btn-outline-secondary">Read more</a>
+                                {% block post_title %}<h4>{{ art.title }}</h4>{% endblock %}
+                                {% block post_text %}<p>{{ art.description }}
+                                </p>{% endblock %}
+                            <a href="/article/{{ art.id }}" type="button" class="btn btn-outline-secondary">Read more</a>
                         </div>
-                        <div class="article-short">
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nihil placeat sapiente unde
-                                veniam. Commodi facere numquam odit possimus rem similique, ullam voluptas? Cum deleniti
-                                dolorem facere magnam sapiente voluptate?
-                            </p>
-                            <p>Consectetur, dicta facere illo ipsum libero omnis quo rem. Ab dolor ea error, illo in
-                                incidunt iste labore natus nobis omnis praesentium quidem quod repudiandae sapiente ullam.
-                                Doloremque, temporibus, voluptates.
-                            </p>
-                            <a href="#" type="button" class="btn btn-outline-secondary">Read more</a>
-                        </div>
-                        <div class="article-short">
-                            <h4>Lorem ipsum dolor sit amet, consectetur</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nihil placeat sapiente unde
-                                veniam. Commodi facere numquam odit possimus rem similique, ullam voluptas? Cum deleniti
-                                dolorem facere magnam sapiente voluptate?
-                            </p>
-                            <p>Consectetur, dicta facere illo ipsum libero omnis quo rem. Ab dolor ea error, illo in
-                                incidunt iste labore natus nobis omnis praesentium quidem quod repudiandae sapiente ullam.
-                                Doloremque, temporibus, voluptates.
-                            </p>
-                            <a href="#" type="button" class="btn btn-outline-secondary">Read more</a>
-                        </div>
+
+                            {% endfor %}
                         {% endblock %}
                     </div>
 
