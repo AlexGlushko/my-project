@@ -18,7 +18,7 @@ class AuthorController extends AbstractController
 
     public function author()
     {
-        return $this-> render('pages/author.html.twig',[
+        return $this-> render('articles/author.html.twig',[
             'author' => $this->author
         ]);
     }

@@ -13,7 +13,7 @@ class DonateController extends AbstractController
     public function donate()
     {
 
-        return $this->render('pages/donate.html.twig',[
+        return $this->render('articles/donate.html.twig',[
             'moneytaker' => $this->moneytaker,
         ]);
     }
