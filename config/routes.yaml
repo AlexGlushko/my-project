@@ -1,17 +1,16 @@
 index:
-    path: /
-    controller: App\Controller\ArticlesController::showAll
+  path: /
+  controller: App\Controller\ArticlesController::showAll
 
 article_show:
-    path: /article/{id}
-    controller: App\Controller\ArticlesController::show
+  path: /article/{id}
+  controller: App\Controller\ArticlesController::show
 
 donate:
-    path: /donate
-    controller: App\Controller\DonateController::donate
+  path: /donate
+  controller: App\Controller\DonateController::donate
 
 author:
-    path: /author
-    controller: App\Controller\AuthorController::author
-
+  path: /author
+  controller: App\Controller\AuthorController::author
 
