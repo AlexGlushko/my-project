@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+ {% block main_content %}
+     {% for article in articles %}
+         <div class="article-short">
+             {% block post_title %}<h4>{{ article.title }}</h4>{% endblock %}
+             {% block post_text %}<p>{{ article.description }}
+                 </p>{% endblock %}
+             <a href="{{ path('article_show', {'id': article.id}) }}" type="button" class="btn btn-outline-secondary">Read more</a>
+         </div>
+
+     {% endfor %}
+ {% endblock %}

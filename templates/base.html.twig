@@ -38,15 +38,7 @@
 
                     <div class="col-md-8 main-content">
                         {% block main_content %}
-                            {% for art in article %}
-                        <div class="article-short">
-                                {% block post_title %}<h4>{{ art.title }}</h4>{% endblock %}
-                                {% block post_text %}<p>{{ art.description }}
-                                </p>{% endblock %}
-                            <a href="/article/{{ art.id }}" type="button" class="btn btn-outline-secondary">Read more</a>
-                        </div>
 
-                            {% endfor %}
                         {% endblock %}
                     </div>
 
