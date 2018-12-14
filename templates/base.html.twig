@@ -14,18 +14,32 @@
 
         <div class="container">
 
-            <div class="row justify-content-center header">
+            <div class="row header">
                 {% block header %}
-                    <div class="col-md-4 logotype">
+                    <div class="col-md-2 logotype">
                         {{ logoname }}
                      </div>
 
-                        <nav class="nav col-md-8">
-                            <a class="nav-link active" href="{{ path('index') }}">Home</a>
-                            <a class="nav-link" href="{{ path('donate') }}">Donate</a>
-                            <a class="nav-link" href="{{ path('author') }}">Author</a>
+                        <nav class="nav col-md-4">
+                            <a class="nav-link pr-0 active" href="{{ path('index') }}">Home</a>
+                            <a class="nav-link pr-0" href="{{ path('donate') }}">Donate</a>
+                            <a class="nav-link pr-0" href="{{ path('author') }}">Author</a>
 
                         </nav>
+
+                        <div class="form-row justify-content-end">
+                            <div class="col">
+                                <input type="text" class="form-control" id="inlineFormInput" placeholder="Username">
+                            </div>
+                            <div class="col">
+                                <div class="input-group ">
+                                    <input type="password" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary ">Sign in</button>
+                            </div>
+                        </div>
 
                 {% endblock %}
             </div>
@@ -36,7 +50,7 @@
             <div class="row justify-content-center">
 
 
-                    <div class="col-md-8 main-content">
+                    <div class="col-md-10 main-content">
                         {% block main_content %}
 
                         {% endblock %}
@@ -44,15 +58,15 @@
 
 
                 {% block left_menu %}
-                    <div class="col-md-4">
+                    <div class="col-md-2">
                         <div class="right-side-menu">
                             <h5>Categories</h5>
                             <nav class="nav flex-column">
-                                <a class="nav-link active" href="#">Politics</a>
-                                <a class="nav-link" href="#">Bussines</a>
-                                <a class="nav-link" href="#">Medical</a>
-                                <a class="nav-link" href="#">In a world</a>
-                                <a class="nav-link disabled" href="#">WAR</a>
+                                <a class="nav-link pb-0 pt-1 active" href="#">Politics</a>
+                                <a class="nav-link pb-0 pt-1" href="#">Bussines</a>
+                                <a class="nav-link pb-0 pt-1" href="#">Medical</a>
+                                <a class="nav-link pb-0 pt-1" href="#">In a world</a>
+                                <a class="nav-link pb-0 pt-1 disabled" href="#">War </a>
                             </nav>
                         </div>
 

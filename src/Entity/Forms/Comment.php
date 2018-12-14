@@ -2,11 +2,30 @@
 
 namespace App\Entity\Forms;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 class Comment
 {
 
+    /**
+     * @Assert\NotBlank
+     */
     protected $name;
+
+    /**
+     * @Assert\NotBlank
+     * @Assert\NotNull
+     */
     protected $password;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(
+     *     min = 10,
+     *     max = 220
+     * )
+     */
     protected $text;
 
 
