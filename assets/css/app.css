@@ -26,3 +26,8 @@
 .article-short{
     padding-bottom: 1.5rem;
 }
+
+.comment-form{
+    padding-bottom: 15px;
+    min-height: 30px;
+}

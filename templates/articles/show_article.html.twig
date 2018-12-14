@@ -1,10 +1,13 @@
 {% extends 'base.html.twig' %}
 
- {% block main_content %}
-          <div class="article-short">
-              {% block post_title %}<h4>{{ article.title }}</h4>{% endblock %}
-              {% block post_text %}<p>{{ article.text }}</p>{% endblock %}
+{% block main_content %}
+    <div class="article-short">
+        {% block post_title %}<h4>{{ article.title }}</h4>{% endblock %}
+        {% block post_text %}<p>{{ article.text }}</p>{% endblock %}
+    </div>
+    {% block comments %}
+        {{ render(controller('App\\Controller\\Forms\\CommentFormController::commentFormAction')) }}
+    {% endblock %}
+{% endblock %}
 
-     </div>
 
- {% endblock %}
