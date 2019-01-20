@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Forms\Comment;
+use App\Form\CommentType;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Article;
@@ -39,5 +41,15 @@ class ArticlesController extends AbstractController
             );
         }
         return $this -> render('articles/show_articles_home.twig', ['articles'=> $articles]);
+    }
+
+    public function comment()
+    {
+        $comment = new Comment();
+        $form = $this->createForm(CommentType::class, $comment);
+
+        return $this->render('forms/comment_form.html.twig', array(
+            'form' => $form->createView(),
+        ));
     }
 }

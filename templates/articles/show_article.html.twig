@@ -6,7 +6,7 @@
         {% block post_text %}<p>{{ article.text }}</p>{% endblock %}
     </div>
     {% block comments %}
-        {{ render(controller('App\\Controller\\Forms\\CommentFormController::commentFormAction')) }}
+        {{ render(controller('App\\Controller\\ArticlesController::comment')) }}
     {% endblock %}
 {% endblock %}
 

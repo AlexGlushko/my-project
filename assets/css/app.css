@@ -31,3 +31,7 @@
     padding-bottom: 15px;
     min-height: 30px;
 }
+
+.navlinkcustom {
+    padding: .1rem 1rem;!important
+}
